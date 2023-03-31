@@ -7,7 +7,7 @@ using namespace std;
 int choice;
 int main()
 {
-    cout << "Bienvenido a mis tareas, escoga de la lista.\n 1.-\n2.-\n3.-\n4.-\n5.-\n6.-\n";
+    cout << "Bienvenido a mis tareas, escoga de la lista.\n 1.-Guessmynumber\n2.Homework\n3.-\n4.-\n5.-\n6.-\n";
     cin >> choice;
 	switch (choice)
 	{
@@ -15,6 +15,7 @@ int main()
 		Homework1();
 		break;
 	case 2:
+		homework2();
 		break;
 	case 3:
 		break;

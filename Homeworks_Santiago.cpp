@@ -18,6 +18,7 @@ int main()
 		homework2();
 		break;
 	case 3:
+		Homework3();
 		break;
 	case 4:
 		break;

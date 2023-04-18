@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 void Homework1()
 {
@@ -131,4 +132,106 @@ void homework2()
     default:
         break;
     }
+}
+void Homework3()
+{
+    int option;
+    srand(static_cast<unsigned int>(time(0)));
+    int Pcoption = 1 + rand() % (3);
+    int jugar;
+    do //todo el programa
+    {
+        int score = 0;
+        int pcscore = 0;
+        do//juego
+        {
+            do//Opcion juego para evitar numero random
+            {
+                system("cls");
+                cout << Pcoption << endl << "Jugador:" << score << " Computadora:" << pcscore << endl << "Bienvenido a Piedra, Papel o Tijera!, Escoge: Piedra(1) Papel(2) Tijera(3)";
+                cin >> option;
+            } while (option > 3 || option < 1 || option == 0);
+            switch (option)
+            {
+            case 1:
+                if (Pcoption == 2)
+                {
+                    cout << "Perdiste, la computadora obtiene un punto!\n";
+                    pcscore++;
+
+                    system("pause");
+
+                }
+                if (option == Pcoption)
+                {
+                    cout << "Empate, Nadie Gana Puntos!\n";
+
+                    system("pause");
+                }
+                if (Pcoption == 3)
+                {
+                    cout << "Ganaste obtienes un punto!\n";
+                    score++;
+
+                    system("pause");
+                }
+                break;
+            case 2:
+                if (Pcoption == 3)
+                {
+                    cout << "Perdiste, la computadora obtiene un punto!\n";
+                    pcscore++;
+
+                    system("pause");
+                }
+                if (option == Pcoption)
+                {
+                    cout << "Empate, Nadie Gana Puntos!\n";
+
+                    system("pause");
+                }
+                if (Pcoption == 1)
+                {
+                    cout << "Ganaste obtienes un punto!\n";
+                    score++;
+
+                    system("pause");
+                }
+                break;
+            case 3:
+                if (Pcoption == 1)
+                {
+                    cout << "Perdiste, la computadora obtiene un punto!\n";
+                    pcscore++;
+
+                    system("pause");
+                }
+                if (option == Pcoption)
+                {
+                    cout << "Empate, Nadie Gana Puntos!\n";
+
+                    system("pause");
+                }
+                if (Pcoption == 2)
+                {
+                    cout << "Ganaste obtienes un punto!\n";
+                    score++;
+
+                    system("pause");
+                }
+                break;
+            }
+        } while (score < 2 && pcscore < 2);
+        if (score == 2)
+        {
+            cout << "Ganaste la partida!";
+
+        }
+        else
+        {
+            cout << "Perdiste la partida!";
+        }
+        cout << "Quieres seguir Jugando? Si(cualquier numero) No(4)\n";
+        cin >> jugar;
+    } while (jugar != 4);
 }
